@@ -1,9 +1,7 @@
 FROM debian:bullseye
 
 RUN apt-get update && \
-    apt-get install -y redis-server && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y redis-server
 
 COPY conf/redis.conf /etc/redis/redis.conf
 

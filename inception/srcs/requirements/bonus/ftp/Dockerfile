@@ -6,13 +6,14 @@ COPY tools/ftp.sh /ftp.sh
 
 RUN chmod +x /ftp.sh
 
+COPY conf/vsftpd.conf /etc/vsftpd.conf
+
 CMD ["/ftp.sh"]
 
 # RUN mkdir -p /var/run/vsftpd/empty && chmod 755 /var/run/vsftpd/empty && mkdir -p /var/www/html
 
 # RUN useradd -m ftpuser && echo "ftpuser:$FTP_PASSWORD" | chpasswd && chown -R ftpuser:ftpuser /var/www/html
 
-# COPY conf/vsftpd.conf /etc/vsftpd.conf
 
 # EXPOSE 21 21000-21010
 

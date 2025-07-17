@@ -88,19 +88,19 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/nnn/Desktop/inception/srcs/data/potainer_data
+      device: /home/nnn/data/portainer
       o: bind
   wordpress_volume:
     driver: local
     driver_opts:
       type: none
-      device: /home/nnn/Desktop/inception/srcs/data/wordpress
+      device: /home/nnn/data/wordpress
       o: bind
   mariadb_volume:
     driver: local
     driver_opts:
       type: none
-      device: /home/nnn/Desktop/inception/srcs/data/mariadb
+      device: /home/nnn/data/mariadb
       o: bind
 
 networks:

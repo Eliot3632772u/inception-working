@@ -49,6 +49,8 @@ if ! wp core is-installed --allow-root; then
         --allow-root
 fi
 
+# chown -R www-data:www-data /var/www/html
+
 if ! wp plugin is-installed redis-cache --allow-root; then
     echo "📦 Installing Redis Object Cache plugin..."
     wp plugin install redis-cache --activate --allow-root
