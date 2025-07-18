@@ -13,8 +13,6 @@ mysql -u root -e "GRANT ALL PRIVILEGES ON \`${MYSQL_DATABASE}\`.* TO '${MYSQL_US
 mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}' WITH GRANT OPTION;"
 mysql -u root -e "FLUSH PRIVILEGES;"
 
-# mysqladmin -u root -p"${MYSQL_ROOT_PASSWORD}" shutdown;
-
 service mariadb stop;
 
 exec mysqld_safe;
